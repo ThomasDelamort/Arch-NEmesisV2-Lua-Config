@@ -1,0 +1,62 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  // ── Logo ──────────────────────────────────────────────────────
+  "logo": {
+    "source": "~/.config/fastfetch/tokyonight-arch.txt",
+    "type": "file-raw",
+    "padding": { "top": 1, "left": 2, "right": 3 }
+  },
+
+  // ── Global display ────────────────────────────────────────────
+  "display": {
+    "separator": "  ",
+    "key": { "width": 12 },
+    "color": {
+      "keys": "38;2;122;162;247",
+      "title": "38;2;187;154;247"
+    }
+  },
+
+  "modules": [
+    "break",
+
+    // ── Title ───────────────────────────────────────────────────
+    {
+      "type": "title",
+      "format": "{#keys}{user-name}{#}{at-symbol-colored}{#title}{host-name}{#}"
+    },
+    { "type": "separator", "string": "─" },
+
+    // ── System ──────────────────────────────────────────────────
+    { "type": "custom", "format": "{#90} {#title}System{#}" },
+    { "type": "os",       "key": "   OS",       "keyColor": "38;2;187;154;247" },
+    { "type": "kernel",   "key": "   Kernel",   "keyColor": "38;2;187;154;247" },
+    { "type": "packages", "key": "   Packages", "format": "{} (pacman)", "keyColor": "38;2;187;154;247" },
+    { "type": "uptime",   "key": "   Uptime",   "keyColor": "38;2;187;154;247" },
+
+    "break",
+
+    // ── Desktop ─────────────────────────────────────────────────
+    { "type": "custom", "format": "{#90} {#title}Desktop{#}" },
+    { "type": "wm",       "key": "   WM",      "keyColor": "38;2;122;162;247" },
+    { "type": "shell",    "key": "   Shell",   "keyColor": "38;2;122;162;247" },
+    { "type": "terminal", "key": "   Term",    "keyColor": "38;2;122;162;247" },
+    { "type": "display",  "key": "   Display", "keyColor": "38;2;122;162;247" },
+
+    "break",
+
+    // ── Hardware ────────────────────────────────────────────────
+    { "type": "custom", "format": "{#90}󰍛 {#title}Hardware{#}" },
+    { "type": "cpu",    "key": "   CPU",  "keyColor": "38;2;125;207;255" },
+    { "type": "gpu",    "key": "   GPU",  "keyColor": "38;2;125;207;255" },
+    { "type": "memory", "key": "   Mem",  "keyColor": "38;2;125;207;255" },
+    { "type": "disk",   "key": "   Disk", "folders": "/", "keyColor": "38;2;125;207;255" },
+
+    "break",
+
+    // ── Colors ──────────────────────────────────────────────────
+    { "type": "colors", "symbol": "circle", "paddingLeft": 3 },
+    "break"
+  ]
+}

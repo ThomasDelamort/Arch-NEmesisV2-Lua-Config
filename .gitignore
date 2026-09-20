@@ -1,0 +1,11 @@
+# Heavy app data/cache directories - not config, just bloats repo size
+Code/
+mozilla/
+discord/
+pgadmin4/
+Insomnia/
+
+# Secrets / auth tokens
+obs-studio/plugin_config/obs-websocket/config.json
+pulse/cookie
+dconf/user
