@@ -1,5 +1,6 @@
 # Heavy app data/cache directories - not config, just bloats repo size
 Code/
+Code - OSS/
 mozilla/
 discord/
 pgadmin4/
